@@ -4,7 +4,7 @@ namespace SoftDrinkDataAccess.Database
 {
     public class SoftDrinkDbContext: DbContext
     {
-        public DbSet<SoftDrinkPersonTable> FlightPersons { get; set; }
+        public DbSet<SoftDrinkPersonTable> SoftDrinkPersonTable { get; set; }
 
         public SoftDrinkDbContext(DbContextOptions<SoftDrinkDbContext> options):
             base(options)

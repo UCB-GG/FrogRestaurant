@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FrogRestaurant.Models;
 using FrogRestaurant.Classes.Factories;
@@ -32,7 +27,6 @@ namespace FrogRestaurant.Controllers
         [HttpGet]
         public IActionResult NewPerson()
         {
-
             return View();
         }
 
@@ -40,9 +34,7 @@ namespace FrogRestaurant.Controllers
         public IActionResult NewPerson(PersonViewModel person)
         {
             personManager.AddNewPerson(person);
-
             return RedirectToAction("Index");
         }
-
     }
 }

@@ -15,13 +15,13 @@ namespace SoftDrinkDataAccess
         }
         public void AddNewPerson(SoftDrinkPersonTable person)
         {
-            _softDrinkDbContext.FlightPersons.Add(person);
+            _softDrinkDbContext.SoftDrinkPersonTable.Add(person);
             _softDrinkDbContext.SaveChanges();
         }
 
         public List<SoftDrinkPersonTable> GetPersons()
         {
-            return _softDrinkDbContext.FlightPersons.ToList();
+            return _softDrinkDbContext.SoftDrinkPersonTable.ToList();
         }
     }
 }
