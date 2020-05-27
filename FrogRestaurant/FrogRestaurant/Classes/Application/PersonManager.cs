@@ -16,19 +16,19 @@ namespace FrogRestaurant.Classes.Application
     {
         private readonly IPizzaDbManager _pizzaDbManager;
         private readonly ISoftDrinkDbManager _softDrinkDbManager;
-        private Adaptor adaptor;
+        private Adaptor _adaptor;
         public PersonManager(IFactory factory)
         {
             this._pizzaDbManager = factory.GetPizzaDbManager();
             this._softDrinkDbManager = factory.GetSoftDrinkDbManager();
 
-            adaptor = factory.GetAdaptor();
+            _adaptor = factory.GetAdaptor();
         }
 
         public List<PersonViewModel> GetPersons()
         {
-            var busPersons = adaptor.GetPersons(_pizzaDbManager.GetPersons());
-            var flightPersons = adaptor.GetPersons(_softDrinkDbManager.GetPersons());
+            var busPersons = _adaptor.GetPersons(_pizzaDbManager.GetPersons());
+            var flightPersons = _adaptor.GetPersons(_softDrinkDbManager.GetPersons());
 
             busPersons.AddRange(flightPersons);
 

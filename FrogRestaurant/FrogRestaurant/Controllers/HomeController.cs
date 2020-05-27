@@ -6,32 +6,43 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FrogRestaurant.Models;
+using FrogRestaurant.Classes.Factories;
+using FrogRestaurant.Classes.Application;
 
 namespace FrogRestaurant.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        
+        private PersonManager personManager;
+        public HomeController(ILogger<HomeController> logger,
+                              IFactory factory)
         {
             _logger = logger;
+            personManager = new PersonManager(factory);
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
+            return View(personManager.GetPersons());
+        }
+
+        [HttpGet]
+        public IActionResult NewPerson()
+        {
+
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult NewPerson(PersonViewModel person)
         {
-            return View();
+            personManager.AddNewPerson(person);
+
+            return RedirectToAction("Index");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
