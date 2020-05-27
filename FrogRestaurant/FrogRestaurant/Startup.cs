@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using FrogRestaurant.Classes.Factories;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +37,7 @@ namespace FrogRestaurant
             services.AddDbContext<PizzaDbContext>(options => options.UseSqlServer(connString));
             services.AddDbContext<SoftDrinkDbContext>(options => options.UseSqlServer(connString));
 
+            services.AddScoped<IFactory, Factory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

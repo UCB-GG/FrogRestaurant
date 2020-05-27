@@ -4,7 +4,7 @@ using PizzaDataAccess.Database;
 
 namespace PizzaDataAccess.Contracts
 {
-    interface IPizzaDbManager
+   public interface IPizzaDbManager
     {
         List<PizzaPersonTable> GetPersons();
 

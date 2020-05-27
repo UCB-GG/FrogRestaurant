@@ -4,7 +4,7 @@ using SoftDrinkDataAccess.Database;
 
 namespace SoftDrinkDataAccess.Contracts
 {
-    interface ISoftDrinkDbManager
+    public interface ISoftDrinkDbManager
     {
         List<SoftDrinkPersonTable> GetPersons();
 
