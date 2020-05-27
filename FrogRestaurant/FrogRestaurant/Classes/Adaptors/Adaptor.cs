@@ -15,12 +15,12 @@ namespace FrogRestaurant.Classes.Adaptors
     {
         public List<PersonViewModel> GetPersons(List<PizzaPersonTable> list)
         {
-            return list.Select(x => new PersonViewModel { PersonName = x.Name, FoodItemDescription = "Pizza" }).ToList();
+            return list.Select(x => new PersonViewModel { PersonName = x.Name, FoodItemDescription = "Пица" }).ToList();
         }
 
         public List<PersonViewModel> GetPersons(List<SoftDrinkPersonTable> list)
         {
-            return list.Select(x => new PersonViewModel { PersonName = x.Name, FoodItemDescription = "SoftDrink" }).ToList();
+            return list.Select(x => new PersonViewModel { PersonName = x.Name, FoodItemDescription = "Напитка" }).ToList();
         }
     }
 }
