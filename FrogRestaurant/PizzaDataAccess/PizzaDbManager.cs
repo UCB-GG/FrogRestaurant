@@ -15,12 +15,7 @@ namespace PizzaDataAccess
         }
         public void AddNewPerson(PizzaPersonTable person)
         {
-            //ORACLE specific code
-            //int nextValue = GetNextValue();
-            //person.Id = nextValue;
-
             _pizzaDbContext.Persons.Add(person);
-
             _pizzaDbContext.SaveChanges();
         }
 
@@ -28,22 +23,5 @@ namespace PizzaDataAccess
         {
             return _pizzaDbContext.Persons.ToList();
         }
-        //ORACLE SPECIFIC CODE
-        //https://docs.oracle.com/en/database/oracle/oracle-data-access-components/19.3/odpnt/EFCoreAPI.html#GUID-770CD8EA-F963-48A5-A679-CAF471A4DB1A
-        // Да се види UseOracleIdentityColumn
-        //public int GetNextValue()
-        //{
-        //    using (var command = _pizzaDbContext.Database.GetDbConnection().CreateCommand())
-        //    {
-        //        command.CommandText = $"select CORE_PERSON_SEQ.NEXTVAL as NEXTVAL from dual";
-        //        _pizzaDbContext.Database.OpenConnection();
-
-        //        using (var reader = command.ExecuteReader())
-        //        {
-        //            reader.Read();
-        //            return reader.GetInt32(0);
-        //        }
-        //    }
-        //}
     }
 }

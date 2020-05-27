@@ -13,6 +13,8 @@ using Microsoft.Extensions.Hosting;
 
 using PizzaDataAccess.Database;
 
+using SoftDrinkDataAccess.Database;
+
 namespace FrogRestaurant
 {
     public class Startup
@@ -31,10 +33,8 @@ namespace FrogRestaurant
 
             string connString = Configuration["CONN_STRING"];
             services.AddDbContext<PizzaDbContext>(options => options.UseSqlServer(connString));
+            services.AddDbContext<SoftDrinkDbContext>(options => options.UseSqlServer(connString));
 
-            //services.AddDbContext<SoftDrinkDbContext>(options => options.UseSqlServer(connString));
-            //services.AddDbContext<PizzaDbContext>(options => options.UseOracle(connString));
-            // services.AddDbContext<SoftDrinkDbContext>(options => options.UseOracle(connString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
