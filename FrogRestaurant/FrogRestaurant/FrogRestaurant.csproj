@@ -16,8 +16,4 @@
     <ProjectReference Include="..\SoftDrinkDataAccess\SoftDrinkDataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Classes\Application\" />
-  </ItemGroup>
-
 </Project>
