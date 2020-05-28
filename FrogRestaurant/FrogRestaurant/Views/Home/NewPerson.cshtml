@@ -1,0 +1,32 @@
+﻿@model PersonViewModel
+@{
+    ViewData["Title"] = "NewPerson";
+
+    var travelList = new List<SelectListItem>
+{
+         new SelectListItem{ Value = "P", Text = "Пица"},
+         new SelectListItem{ Value = "S", Text = "Напитка"},
+
+    };
+}
+
+<h1 class="text-center my-2">Нов Клиент</h1>
+
+<form asp-controller="Home" asp-action="NewPerson">
+
+
+    <div>
+        <label asp-for="FoodItemType"></label>
+        <select asp-for="FoodItemType" asp-items="travelList"></select>
+    </div>
+
+    <div>
+
+        <label asp-for="PersonName"></label>
+        <input type="text" asp-for="PersonName" />
+    </div>
+
+    <div class="my-2">
+        <button class="btn btn-danger" type="submit">Запиши</button>
+    </div>
+</form>
