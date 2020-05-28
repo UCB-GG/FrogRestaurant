@@ -27,12 +27,12 @@ namespace FrogRestaurant.Classes.Application
 
         public List<PersonViewModel> GetPersons()
         {
-            var pizzaPersons = _adaptor.GetPersons(_pizzaDbManager.GetPersons());
-            var softDrinkPersons = _adaptor.GetPersons(_softDrinkDbManager.GetPersons());
+            var pizzaPersonsViewModel = _adaptor.GetPersons(_pizzaDbManager.GetPersons());
+            var softDrinkPersonsViewModel = _adaptor.GetPersons(_softDrinkDbManager.GetPersons());
 
-            pizzaPersons.AddRange(softDrinkPersons);
+            pizzaPersonsViewModel.AddRange(softDrinkPersonsViewModel);
 
-            return pizzaPersons;
+            return pizzaPersonsViewModel;
         }
 
         public void AddNewPerson(PersonViewModel person)

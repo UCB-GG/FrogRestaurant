@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftDrinkDataAccess", "Soft
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrogRestaurant", "FrogRestaurant\FrogRestaurant.csproj", "{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestInfoTravel", "XUnitTestInfoTravel\XUnitTestInfoTravel.csproj", "{9FAFA308-B3E2-4C96-9749-74AD69FC2193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FAFA308-B3E2-4C96-9749-74AD69FC2193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FAFA308-B3E2-4C96-9749-74AD69FC2193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FAFA308-B3E2-4C96-9749-74AD69FC2193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FAFA308-B3E2-4C96-9749-74AD69FC2193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
