@@ -33,6 +33,23 @@ namespace SoftDrinkDataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CORE_SOFT_DRINK_PERSON");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Toti"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Leo"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Zerroni"
+                        });
                 });
 #pragma warning restore 612, 618
         }

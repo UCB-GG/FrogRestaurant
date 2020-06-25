@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PizzaDataAccess.Database;
+using SoftDrinkDataAccess.Database;
 
-namespace PizzaDataAccess.Migrations
+namespace SoftDrinkDataAccess.Migrations
 {
-    [DbContext(typeof(PizzaDbContext))]
-    partial class PizzaDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SoftDrinkDbContext))]
+    [Migration("20200625101455_SeedData")]
+    partial class SeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,7 +20,7 @@ namespace PizzaDataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("PizzaDataAccess.Database.PizzaPersonTable", b =>
+            modelBuilder.Entity("SoftDrinkDataAccess.Database.SoftDrinkPersonTable", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -28,28 +30,27 @@ namespace PizzaDataAccess.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnName("NAME")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CORE_PERSON");
+                    b.ToTable("CORE_SOFT_DRINK_PERSON");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Name = "Цецо"
+                            Name = "Toti"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Мишо"
+                            Name = "Leo"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Стелиан"
+                            Name = "Zerroni"
                         });
                 });
 #pragma warning restore 612, 618
