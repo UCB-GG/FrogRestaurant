@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PizzaDataAccess\PizzaDataAccess.csproj" />
     <ProjectReference Include="..\SoftDrinkDataAccess\SoftDrinkDataAccess.csproj" />
+    <ProjectReference Include="..\WebApiService\WebApiService.csproj" />
   </ItemGroup>
 
 </Project>

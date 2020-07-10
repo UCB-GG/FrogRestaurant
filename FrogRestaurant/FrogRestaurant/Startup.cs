@@ -12,6 +12,8 @@ using PizzaDataAccess.Database;
 
 using SoftDrinkDataAccess.Database;
 
+using WebApiService.Services.Common;
+
 namespace FrogRestaurant
 {
     public class Startup
@@ -28,11 +30,8 @@ namespace FrogRestaurant
         {
             services.AddControllersWithViews();
 
-            string connString = Configuration["CONN_STRING"];
-            services.AddDbContext<PizzaDbContext>(options => options.UseSqlServer(connString));
-            services.AddDbContext<SoftDrinkDbContext>(options => options.UseSqlServer(connString));
-
-            services.AddScoped<IFactory, Factory>();
+            services.Configure<ServiceOptions>(Configuration.GetSection("ServiceOptions"));
+            services.AddScoped<IServiceFactory, WebServiceFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

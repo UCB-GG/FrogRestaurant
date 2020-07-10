@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FrogRestaurant.Models
 {
+    //TODO Remove it
     public class PersonViewModel
     {
         public string FoodItemDescription { get; set; }
