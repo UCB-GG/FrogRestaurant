@@ -1,6 +1,6 @@
 ﻿namespace WebApiService.Services.PizzaService
 {
-    public class PizzaService
+    public class PizzaApiService
     {
     }
 }

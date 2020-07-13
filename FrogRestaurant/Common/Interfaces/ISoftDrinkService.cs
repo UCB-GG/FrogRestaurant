@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 
 using Common;
+using Common.Models;
 
 namespace FrogRestaurant.Common.Application
 {

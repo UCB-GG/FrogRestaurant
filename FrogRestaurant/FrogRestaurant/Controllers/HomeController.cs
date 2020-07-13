@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using FrogRestaurant.Models;
-using FrogRestaurant.Classes.Factories;
-using FrogRestaurant.Classes.Application;
+using Common.Models;
+using FrogRestaurant.Common.Application;
+using WebApiService;
 
 namespace FrogRestaurant.Controllers
 {
@@ -12,7 +12,7 @@ namespace FrogRestaurant.Controllers
         
         private PersonManager personManager;
         public HomeController(ILogger<HomeController> logger,
-                              IFactory factory)
+                              WebServiceFactory factory)
         {
             _logger = logger;
             personManager = new PersonManager(factory);
@@ -21,7 +21,7 @@ namespace FrogRestaurant.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(personManager.GetPersons());
+            return View(personManager.GetPersonsAsync());
         }
 
         [HttpGet]

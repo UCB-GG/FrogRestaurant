@@ -1,6 +1,6 @@
 ﻿namespace WebApiService.Services.SoftDrinkService
 {
-    public class SoftDrinkService
+    public class SoftDrinkApiService
     {
     }
 }

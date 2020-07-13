@@ -3,17 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaDataAccess", "PizzaDataAccess\PizzaDataAccess.csproj", "{132F6CD8-FEBE-4BBC-8ECC-41D4C73BF829}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftDrinkDataAccess", "SoftDrinkDataAccess\SoftDrinkDataAccess.csproj", "{D3D47546-C109-491F-8797-9D9294B4334B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrogRestaurant", "FrogRestaurant\FrogRestaurant.csproj", "{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestInfoTravel", "XUnitTestInfoTravel\XUnitTestInfoTravel.csproj", "{9FAFA308-B3E2-4C96-9749-74AD69FC2193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{05760891-4C2A-475F-A63A-DA744755F5CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{05760891-4C2A-475F-A63A-DA744755F5CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiService", "WebApiService\WebApiService.csproj", "{CBE13397-6FAF-4328-AD2F-0636D4E68066}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiService", "WebApiService\WebApiService.csproj", "{CBE13397-6FAF-4328-AD2F-0636D4E68066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{132F6CD8-FEBE-4BBC-8ECC-41D4C73BF829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{132F6CD8-FEBE-4BBC-8ECC-41D4C73BF829}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{132F6CD8-FEBE-4BBC-8ECC-41D4C73BF829}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{132F6CD8-FEBE-4BBC-8ECC-41D4C73BF829}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3D47546-C109-491F-8797-9D9294B4334B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3D47546-C109-491F-8797-9D9294B4334B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3D47546-C109-491F-8797-9D9294B4334B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3D47546-C109-491F-8797-9D9294B4334B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D789BC-9272-4BD8-A0C1-EB3E2B0389A4}.Release|Any CPU.ActiveCfg = Release|Any CPU

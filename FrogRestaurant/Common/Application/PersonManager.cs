@@ -50,7 +50,7 @@ namespace FrogRestaurant.Common.Application
         //    return allPersons;
         //}
 
-        public void AddNewPersons(PersonViewModel person)
+        public void AddNewPerson(PersonViewModel person)
         {
             if (person.FoodItemDescription == "P") //Pizza
             {
